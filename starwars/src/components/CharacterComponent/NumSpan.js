@@ -17,7 +17,7 @@ const SpanOfNum = styled.span`
 function NumSpan(props){
 
     return(
-        <SpanOfNum>{props.number}
+        <SpanOfNum onClick={()=> props.setThePage(props.number)}>{props.number}
         </SpanOfNum>
     )
 }

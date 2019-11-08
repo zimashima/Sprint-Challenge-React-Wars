@@ -19,29 +19,32 @@ const AllCards = styled.div`
 `
 
 function Character() {
-    const [peeps, setPeeps] = useState(All)
+    const [peeps, setPeeps] = useState([])
     const [page, setPage] = useState(NumSys[0])
 
+
     useEffect(()=>{
-        page.forEach(num => {
-            let newPeeps = []
-            axios.get(`https://swapi.co/api/people/${num}`)
-                 .then (response => {
-                     console.log(response.data)
-                 })
-                 .catch (error => {
-                     console.log("GET!", error)
-                 })
-            newPeeps.push(response.data)
-            setPeeps(newPeeps)
-         })
-    })
-    
+        axios.get(`https://swapi.co/api/people/?page=${page}`)
+        .then(response => {
+            setPeeps(response.data.results)
+        })
         
+        .catch(err =>{
+            console.log(`GET`, err)
+        })
+
+    }, [page])
+
+
+
+    
+    
 
     return(
             <AllCards>
+                
                 {
+                    
                     peeps.map((char, index) =>(
                         <Template 
                         key={index}
@@ -55,10 +58,10 @@ function Character() {
                 }
                 <Paginacion>
                 {
-                    NumSys.map((group, ind)=>(
+                    NumSys.map((num)=>(
                         <NumSpan
-                            number={ind+1} 
-                            onClick={()=> setPage(group)}/>
+                            number={num} 
+                            setThePage={setPage}/>
                     ))
                 }
                 </Paginacion>
