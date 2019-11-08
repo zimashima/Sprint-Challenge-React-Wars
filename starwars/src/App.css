@@ -6,3 +6,29 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap');
+
+html{
+  font-size: 62.50%;
+}
+
+p{
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-size: 6rem;
+  font-family: 'Anton', sans-serif;
+}
+
+h2{
+  font-size: 4.8rem;
+  font-family: 'Anton', sans-serif;
+}
+
+h3{
+  font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+}
