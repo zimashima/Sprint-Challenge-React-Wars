@@ -1,8 +1,4 @@
-export const AllChar = {
-	"count": 87,
-	"next": "https://swapi.co/api/people/?page=2",
-	"previous": null,
-	"results": [
+export const All = [
 		{
 			"name": "Luke Skywalker",
 			"height": "172",
@@ -275,4 +271,3 @@ export const AllChar = {
 			"url": "https://swapi.co/api/people/10/"
 		}
 	]
-}

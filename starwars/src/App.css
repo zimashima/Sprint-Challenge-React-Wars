@@ -16,6 +16,8 @@ html{
 p{
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  text-align: left;
 }
 
 h1{
