@@ -25,15 +25,42 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    
+    ------------------------------------------------
+    	React JS is a JS  library created by Facebook. Its purpose is for building user interfaces (reactjs.org). It is used to build composable and reusable UI. Just like its name, it reacts to user interaction with the webpage and allows data change by render method. React breaks the webpage into different components where you can use HTML and JS to create interactive and dynamic content. Since everything is in components, it makes it easier to predict the result and debug. (credit: https://reactjs.org/blog/2013/06/05/why-react.html, https://reactjs.org/)
+	
+    	Example of this is when you create a React Application, you can break each part in to different components such as card component, where you create and style a card containing content, and pass on a data to the card to display in the Application. Besides this card component, you may also have Form component where you take input from user and render it to the webpage, etc.
+    ------------------------------------------------
 
 - [ ] What does it mean to _think_ in react?
 
+------------------------------------------------
+	To think in react is to deconstructing UI into different components and build each component, flow of data, and style them as you go. 
+	So first, starting with designing the website and think of how many components you are going to need for this website and how data is passed, then build those components. While building, think about how the code will be reuse and utilize how react could help in making your code DRY and clean. Figure out where the state should be.
+
+------------------------------------------------
+
 - [ ] Describe state.
+
+------------------------------------------------
+	State is a react object that allows the changes of data even after it was rendered and is an important object in creating dynamic and interactive content. 
+	In React component, a state would be defined by deconstructing array of variable and state. Once useState is called, it changes the value of the variable, thus, allowing the rendering of new data into the UI.
+
+------------------------------------------------
 
 - [ ] Describe props.
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+------------------------------------------------
+	Props is an object that allows passing data from parent component into its child component. It is defined as a parameter of a function and where you can create a place holder in the parent function using {props.placeholdername }, then passing on the value it receives into child component.
 
+------------------------------------------------
+
+- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+------------------------------------------------
+	Side effects things that affects something outside the function scope being executed. Examples of these are requesting API data, logging, etc. According to Reactjs.org, side effects can be categorized in two common kinds: one that requires clean up while another don't (https://reactjs.org/docs/hooks-effect.html) We can manage these side effects by using useEffect Hook in React Component.
+	
+    useEffect used inside a  component allows access to state, props, variable. useEffect takes a callback function and it will run every time a page is rendered.
+------------------------------------------------
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
